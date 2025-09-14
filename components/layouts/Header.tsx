@@ -43,13 +43,13 @@ export default function MainHeader() {
 
 					
 					<Link
-						href="/about"
+						href="/trip"
 						className={cn(
 							"text-sm font-medium transition-colors ",
-							isActive("/about") &&
+							isActive("/trip") &&
 								"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
 						)}>
-					About
+					Create Trip
 					</Link>
 					<Link
 						href="/journey"

@@ -11,27 +11,26 @@ import {
 	CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 export function CarouselPlugin() {
 	const plugin = React.useRef(
 		Autoplay({ delay: 2000, stopOnInteraction: true })
 	);
 
 	const slides = [
-  {
-    image: "/hero1.jpg",
-    title: "Plan Your Dream Journey with Wayferen",
-    description:
-      "Let AI craft a personalized travel itinerary just for you — from flights to hidden gems.",
-  },
-  {
-    image: "/hero2.jpg",
-    title: "Smart Trips, Zero Stress",
-    description:
-      "Discover destinations, manage budgets, and build perfect plans — all in one place.",
-  },
-];
-
+		{
+			image: "/hero1.jpg",
+			title: "Plan Your Dream Journey with Wayferen",
+			description:
+				"Let AI craft a personalized travel itinerary just for you — from flights to hidden gems.",
+		},
+		{
+			image: "/hero2.jpg",
+			title: "Smart Trips, Zero Stress",
+			description:
+				"Discover destinations, manage budgets, and build perfect plans — all in one place.",
+		},
+	];
 
 	return (
 		<Carousel
@@ -58,11 +57,16 @@ export function CarouselPlugin() {
 								<p className="text-white text-base sm:text-lg  mt-2 max-w-lg">
 									{slide.description}
 								</p>
-
-								<Button size={'lg'} className="my-4 bg-[#d3803c] hover:bg-[#be6b27]">
-								<span className="relative z-10 flex flex-row items-center">Plan Trip</span>
-								<span className="absolute inset-0 z-0 animate-shimmer bg-[linear-gradient(110deg,rgba(255,255,255,0.1),45%,rgba(255,255,255,0.3),55%,rgba(255,255,255,0.1))] bg-[length:200%_100%]"></span>
+								<Link href={'/trip'}>
+								<Button
+									size={"lg"}
+									className="my-4 bg-[#d3803c] hover:bg-[#be6b27]">
+									<span className="relative z-10 flex flex-row items-center">
+										Plan Trip
+									</span>
+									<span className="absolute inset-0 z-0 animate-shimmer bg-[linear-gradient(110deg,rgba(255,255,255,0.1),45%,rgba(255,255,255,0.3),55%,rgba(255,255,255,0.1))] bg-[length:200%_100%]"></span>
 								</Button>
+										</Link>
 							</div>
 						</div>
 					</CarouselItem>

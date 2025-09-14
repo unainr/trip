@@ -85,7 +85,7 @@ const TripForm = () => {
 		try {
 			setLoading(true);
 			const tripData = await CreateTrip(values);
-			if (tripData.success) {
+			if (tripData?.success) {
 				setLoading(false);
 				router.push(`/trip-id/${tripData?.data?.id}`);
 			}
@@ -97,7 +97,7 @@ const TripForm = () => {
 	}
 
 	return (
-		<div className="w-full bg-gray-50 py-12 px-4">
+		<div className="w-full  py-12 px-4">
 			<div className="mx-auto">
 				{/* Header */}
 				<div className="text-center mb-12">

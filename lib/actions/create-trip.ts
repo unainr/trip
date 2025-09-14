@@ -9,9 +9,7 @@ import { generateText } from "ai";
 import { desc, eq } from "drizzle-orm";
 export const CreateTrip = async (params: FormTrip) => {
 	const { userId } = await auth();
-
-	if (!userId) throw new Error("Unauthorized: User not logged in");
-
+	if(!userId) return null
 	const { country, travelStyle, interests, budget, duration, groupType } =
 		params;
 	const unSplashApiKey = process.env.UNSPLASH_ACCESS_KEY;
