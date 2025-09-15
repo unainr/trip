@@ -217,7 +217,7 @@ const TripView = async ({ params }: { params: Promise<{ id: string }> }) => {
 								Pay and join trip
 							</span>
 
-							<Badge className="inline-flex items-center justify-center gap-2.5 px-2.5 py-[3px] relative bg-white rounded-[20px] border-0 hover:bg-white">
+							<Badge className="inline-flex items-center justify-center gap-2.5 px-2.5 py-[3px] relative  rounded-[20px] border-0 ">
 								<span className="relative w-fit [font-family:'Figtree',Helvetica] font-semibold text-white text-sm tracking-[0] leading-4 whitespace-nowrap">
 									${data.estimatedPrice}
 								</span>
