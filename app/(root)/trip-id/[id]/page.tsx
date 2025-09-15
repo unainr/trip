@@ -212,13 +212,13 @@ const TripView = async ({ params }: { params: Promise<{ id: string }> }) => {
 			<div className="flex flex-col w-full max-w-[742px] items-start justify-center gap-5 relative">
 				<div className="justify-end gap-4 relative w-full flex items-center">
 					<div className="flex items-center justify-end gap-3 relative flex-1">
-						<Button className="h-auto flex items-center justify-center gap-2.5 px-4 py-3.5 relative flex-1 bg-[#256ff1] rounded-lg border-2 border-solid border-[#ecf2ef] shadow-shadow-xs hover:bg-[#1e5bd1] transition-colors">
+						<Button className="h-auto flex items-center justify-center gap-2.5 px-4 py-3.5 relative flex-1 bg-[#d3803c] rounded-lg border-2 border-solid border-[#d3803c] shadow-shadow-xs hover:bg-[#be6b27] transition-colors">
 							<span className="font-semibold text-white text-base leading-5 relative w-fit [font-family:'Figtree',Helvetica] tracking-[0] whitespace-nowrap">
 								Pay and join trip
 							</span>
 
 							<Badge className="inline-flex items-center justify-center gap-2.5 px-2.5 py-[3px] relative bg-white rounded-[20px] border-0 hover:bg-white">
-								<span className="relative w-fit [font-family:'Figtree',Helvetica] font-semibold text-[#1f1f36] text-sm tracking-[0] leading-4 whitespace-nowrap">
+								<span className="relative w-fit [font-family:'Figtree',Helvetica] font-semibold text-white text-sm tracking-[0] leading-4 whitespace-nowrap">
 									${data.estimatedPrice}
 								</span>
 							</Badge>

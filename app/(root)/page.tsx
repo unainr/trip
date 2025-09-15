@@ -45,3 +45,4 @@ const Home = async () => {
 };
 
 export default Home;
+export const revalidate = 10

@@ -26,3 +26,4 @@ const AllTrip = async() => {
 }
 
 export default AllTrip
+export const revalidate = 10
