@@ -96,33 +96,25 @@ export default function MainHeader() {
 									)}>
 									Home
 								</Link>
+								
+					<Link
+						href="/trip"
+						className={cn(
+							"text-sm font-medium transition-colors ",
+							isActive("/trip") &&
+								"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+						)}>
+					Create Trip
+					</Link>
 								<Link
-									href="/learning-ai"
-									className={cn(
-										"text-sm font-medium transition-colors ",
-										isActive("/learning-ai") &&
-											"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-									)}>
-									Learning
-								</Link>
-								<Link
-									href="/journey"
-									className={cn(
-										"text-sm font-medium transition-colors ",
-										isActive("/journey") &&
-											"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-									)}>
-									My Journey
-								</Link>
-								<Link
-									href="/pricing"
-									className={cn(
-										"text-sm font-medium transition-colors ",
-										isActive("/pricing") &&
-											"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-									)}>
-									Pricing
-								</Link>
+						href="/all-trip"
+						className={cn(
+							"text-sm font-medium transition-colors ",
+							isActive("/all-trip") &&
+								"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+						)}>
+					All Trip
+					</Link>
 								<SignedIn>
 									<UserButton />
 								</SignedIn>
@@ -130,7 +122,7 @@ export default function MainHeader() {
 									<Button
 										asChild
 										className="rounded-lg bg-[#be6b27] hover:bg-[#be6b27]/90  text-white">
-										<Link href="/sign-in">Get Started</Link>
+										<Link href="/sign-in">Sign In</Link>
 									</Button>
 								</SignedOut>
 							</nav>
