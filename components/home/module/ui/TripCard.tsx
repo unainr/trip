@@ -13,8 +13,8 @@ export default function TripCard({
 }: TripData) {
 	return (
 		<div className="w-full p-6">
-			<h2 className="text-2xl font-bold mb-6">{travelStyle}</h2>
-				<div className="w-full max-w-64 bg-white rounded-2xl overflow-hidden  border border-gray-100 hover:shadow-sm transition-all duration-300 transform hover:-translate-y-1">
+			<h2 className="text-xl font-bold mb-6">{travelStyle}</h2>
+				<div className="w-full  bg-white rounded-2xl overflow-hidden  border border-gray-100 hover:shadow-sm transition-all duration-300 transform hover:-translate-y-1">
 					<div className="relative">
 						<div
 							className="w-full h-48 bg-cover bg-center bg-gray-200"

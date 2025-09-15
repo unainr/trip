@@ -52,23 +52,15 @@ export default function MainHeader() {
 					Create Trip
 					</Link>
 					<Link
-						href="/journey"
+						href="/all-trip"
 						className={cn(
 							"text-sm font-medium transition-colors ",
-							isActive("/journey") &&
+							isActive("/all-trip") &&
 								"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
 						)}>
-						My Journey
+					All Trip
 					</Link>
-					<Link
-						href="/pricing"
-						className={cn(
-							"text-sm font-medium transition-colors ",
-							isActive("/pricing") &&
-								"text-[#d3803c] hover:text-[#be6b27] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-						)}>
-						Pricing
-					</Link>
+					
 				</nav>
 
 				<div className="hidden md:flex items-center gap-2">
@@ -79,7 +71,7 @@ export default function MainHeader() {
 						<Button
 							asChild
 							className="rounded-lg bg-[#d3803c] hover:bg-[#be6b27]/90  text-white">
-							<Link href="/sign-in">Get Started</Link>
+							<Link href="/sign-in">Sign In</Link>
 						</Button>
 					</SignedOut>
 

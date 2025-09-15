@@ -20,25 +20,31 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1513326738677-b964603b136d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Historic temple architecture",
-    location: "Angkor Wat, Cambodia",
-    category: "Culture"
+    src: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    alt: "Majestic elephant in golden savanna",
+    location: "Masai Mara, Kenya",
+    category: "Wildlife"
   },
   {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Mediterranean coastal village",
-    location: "Santorini, Greece",
-    category: "Villages"
+    id: 5,
+    src: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    alt: "African safari wildlife",
+    location: "Serengeti, Tanzania",
+    category: "Wildlife"
   },
-
   {
     id: 6,
     src: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     alt: "Traditional Japanese temple",
     location: "Kyoto, Japan",
     category: "Culture"
+  },
+  {
+    id: 7,
+    src: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    alt: "Northern lights over snowy landscape",
+    location: "Iceland",
+    category: "Aurora"
   }
 ];
 
@@ -52,13 +58,13 @@ const Gallery = () => {
     : galleryImages.filter(img => img.category === selectedCategory);
 
   return (
-    <section className="py-20 bg-muted/20">
+    <section className="py-10 ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-4">
-            Capture the <span className="bg-gradient-sunset bg-clip-text text-transparent">Moment</span>
+            Capture the <span className="bg-color bg-clip-text text-transparent">Moment</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Get inspired by stunning destinations captured by our travelers and photography team
           </p>
         </div>
@@ -71,8 +77,8 @@ const Gallery = () => {
               variant={selectedCategory === category ? "default" : "outline"}
               className={`cursor-pointer px-4 py-2 text-sm transition-all duration-200 ${
                 selectedCategory === category 
-                  ? "bg-gradient-ocean text-white border-0" 
-                  : "hover:bg-primary/10"
+                  ? "bg-color text-white border-0" 
+                  : "hover:bg-[#d3803c]/10"
               }`}
               onClick={() => setSelectedCategory(category)}
             >
@@ -84,7 +90,7 @@ const Gallery = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredImages.map((image, index) => (
-            <Card key={image.id} className="group overflow-hidden border-0 shadow-soft hover:shadow-card transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={image.id} className="group rounded-lg overflow-hidden border-0 shadow-soft hover:shadow-card transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={image.src}
@@ -100,7 +106,7 @@ const Gallery = () => {
                   </div>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

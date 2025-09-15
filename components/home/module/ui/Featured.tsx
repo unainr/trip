@@ -55,11 +55,11 @@ export const FeaturedDestinationsSection = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative w-full bg-[#f9fbfc]">
+    <section className="flex flex-col items-center  justify-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative w-full bg-[#f9fbfc]">
       {/* Header Section */}
-      <div className="flex flex-col w-full max-w-7xl items-start justify-center gap-3 sm:gap-3.5 relative">
-        <h2 className="relative w-full [font-family:'Figtree',Helvetica] font-bold text-[#1f1f36] text-2xl sm:text-3xl lg:text-4xl tracking-[0] leading-tight sm:leading-[44px] text-center sm:text-left">
-          Featured Travel Destinations
+      <div className="flex flex-col  items-center justify-center gap-3 sm:gap-3.5 relative">
+        <h2 className="relative w-full  [font-family:'Figtree',Helvetica] font-bold text-[#1f1f36] text-2xl sm:text-3xl lg:text-5xl tracking-[0] leading-tight sm:leading-[44px] text-center sm:text-left">
+          Featured Travel <span className="text-color"> Destinations</span>
         </h2>
 
         <p className="relative w-full [font-family:'Figtree',Helvetica] font-normal text-[#7f7e83] text-base sm:text-lg tracking-[0] leading-relaxed sm:leading-[30px] text-center sm:text-left">
